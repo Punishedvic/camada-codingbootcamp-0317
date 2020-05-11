@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Open-Sans";
+    src: url(./fonts/OpenSans-Bold.ttf);
+}
+
+#caja-formulario {
+    display: flex;
+    width: 337px;
+    height: 489px;
+    border: 2px solid grey;
+    background-color: white;
+    border-radius: 2%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+}
+
+.titulo {
+    margin-top: 5px;
+    font-family: "Open-Sans";
+    font-size: 30px;
+    color: rgb(41, 61, 88);
+}
+
+.formulario__enter {
+    margin-top: 10px;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    text-align: center;
+    font-size: 20px;
+}
+
+.email {
+    height: 45px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 46vh;
+}
+
+.contra {
+    height: 45px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 46vh;
+}
+
+::placeholder {
+    font-size: 20px;
+    color: rgba(128, 128, 128, 0.5);
+    font-style: oblique;
+}
+
+.boton-entrar {
+    padding: 11px 105px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(243, 151, 255);
+    font-family: "Open-Sans";
+    font-size: 30px;
+}
+
+.boton-entrar:hover {
+    background-color: rgb(186, 116, 196);
+}
+
+.formulario__olvido {
+    margin-top: 5px;
+}
+
+.olvido--texto {
+    background-color: antiquewhite;
+    padding: 3px 84px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Open-Sans";
+}
+
+.olvido--texto:hover {
+    border: 0.5px solid rgb(243, 151, 255);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
