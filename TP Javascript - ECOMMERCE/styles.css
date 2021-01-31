@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: relative;
+    top: 10%;
+    left: 43%;
+}
+
+
+/* 
+.ham {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+} */
+
+.ham {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 40px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+}
+
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+    background-color: black;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    width: 25vw;
+    height: 50vh;
+    overflow: hidden;
+    color: white;
+    /* hide the menu above the screen by default */
+    transform: translateY(-100%);
+    /* transition adds a little animation when sliding in and out the menu */
+    transition: transform 0.2s ease;
+}
+
+.showNav {
+    /* show the menu */
+    transform: translateY(0);
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.navbar ul li a {
+    color: white;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    border-bottom: 2px solid white;
+}
+
+.portada-img::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/scrambler.jpg);
+    background-size: 100%;
+    background-position: 0 -150px;
+    filter: brightness(0.15);
+}
+
+.portada-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.titulo {
+    font-family: 'Barlow', sans-serif;
+    margin-top: -130px;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    padding: 50px;
+}
+
+.titulo span {
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    left: 41.5%;
+    font-family: 'Lato', sans-serif;
+}
+
+#cta {
+    background-color: rgb(250, 133, 0);
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+#cta:hover {
+    color: white;
+    font-weight: 600;
+    background-color: rgb(100, 53, 0);
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(5, 5, 5);
+    margin-top: 165px;
+    height: 100vh;
+}
+
+.texto {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    color: white;
+}
+
+.texto h2 {
+    font-size: 50px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.texto p {
+    padding-top: 10px;
+    width: 80%;
+}
+
+.imagen {
+    background-image: url(./img/flexMoto.webp);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: -200px;
+}
+
+#cta_dos {
+    font-size: 20px;
+    width: 165px;
+    color: rgb(250, 133, 0);
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+#cta_dos:hover {
+    color: white;
+    font-weight: 600;
+}
+
+.titulo-productos {
+    position: relative;
+    margin: 0;
+    padding: 50px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 60px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.image {
+    height: 250px;
+}
+
+.card {
+    margin: 20px;
+}
+
+.container-filter {
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    background-color: black
+}
+
+.card-title {
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.card-precio {
+    background: linear-gradient(to top, rgba(250, 133, 0, 0.555) 50%, transparent 50%);
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-precio::after {
+    content: '$';
+}
+
+.sub-clientes {
+    background-color: black;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+.expand {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+}
+
+.clientes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 50px;
+    width: auto;
+    color: wheat;
+    cursor: pointer;
+    flex: 0.3;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    box-sizing: border-box;
+}
+
+.panel:hover {
+    border: 1px white solid;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .clientes {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
