@@ -5,13 +5,14 @@ app.innerHTML = `
 <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 portada-img">
+            <img class="img-titulo" src="./img/logo MOTORAMA.png"></img>
             <button class="ham"></button>
             <nav class="navbar">
               <ul>
-                <li><a class="menuLink" href="#">Home</a></li>
-                <li><a class="menuLink" href="#">Nosotros</a></li>
-                <li><a class="menuLink" href="#">Motos</a></li>
-                <li><a class="menuLink" href="#">Contactanos</a></li>
+                <li><a class="menuLink" href="#home">Home</a></li>
+                <li><a class="menuLink" href="#aboutus">Nosotros</a></li>
+                <li><a class="menuLink" href="#productoscta">Motos</a></li>
+                <li><a class="menuLink" href="#footerform">Contactanos</a></li>
               </ul>
             </nav>
                 <h2 class="titulo">M O T O R A M A<br><span>Tu moto, única</span></h2>
@@ -20,10 +21,10 @@ app.innerHTML = `
         </div>
     </div>
 
-    <div class="aboutus">
+    <div class="aboutus" id="aboutus">
         <div class="imagen"></div>
         <div class="texto">
-        <h2>Sos original,<br> tu moto también</h2>
+        <h2>Sos únic<span class="textocambiante"></span>,<br> tu moto también</h2>
         <p class="subtexto"></p>
         <a href="#productoscta" id="cta_dos">VER MODELOS</a>
         </div>
@@ -46,10 +47,11 @@ app.innerHTML = `
 </div>
     <main>
     <h2 class="titulo-productos" id="productoscta">Motos en venta</h2>
+    <h3 class="subtitulo-productos"></h3>
     <section>
             <div class="container-filter">
-                <input type="text" name="" id="input-filder" placeholder="Filter by Style" onkeyup="filtrarProductos(event)">
-                <button type="button" onclick="ordenar()"></button>
+                <input type="text" name="" id="input-filder" placeholder="Filter by Style // 'Scrambler'" onkeyup="filtrarProductos(event)">
+                <button type="button" onclick="ordenar()">Ordenar por precio</button>
             </div>
             <div class="container">
             <div class="row" id="row-productos"></div>
@@ -59,20 +61,121 @@ app.innerHTML = `
     </main>
 </div>
 
-    <footer>
-    <form>
-    </form>
+    <footer class="footer">
+    <div class="flex-formulario">
+    <div class="caja-texto">
+    <h3 id="titulo-caja">Comunicate con nosotros</h3>
+    <p> @MOTORAMA <br> @MOTORAMAMOTOS <br> consultas@motorama.com <br> Florencio Varela 2950, San Justo GBA Oeste</p>
+    </div>  
+    <div class="caja-formulario">
+      <form  id="formulario" action="" method="post">
+        <ul>
+        <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name" placeholder="Tu nombre completo" required>
+        </li>
+        <li>
+        <label for="mail">Correo electrónico:</label>
+        <input type="email" id="mail" name="mail" required minlength="8"" placeholder="Tu email">
+        <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+        <label for="msg">Mensaje:</label>
+        <textarea id="msg" name="user_message" placeholder="Escribí tu consulta!" required></textarea>
+        </li>
+        <button class="submitter">Enviar mensaje</button>
+        </ul>
+      </form>
+      <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup()">&times;</div>
+        <h1>Gracias por comunicarte!</h1>
+        <p>Vamos a leer tu mensaje y te responderemos en breve. Recordá que podés seguirnos en nuestras redes sociales. ¡Esperamos verte pronto! -El equipo de MOTORAMA.</p>
+      </div>
+    </div>
+       
+
+    </div>
+    </div>
     </footer>
     
     `;
 
-// inner TEXT
+// inner TEXT // ABOUTUS & VENTAS
 
 let subtexto = document.querySelector('.subtexto');
 subtexto.textContent = "En MOTORAMA trabajamos desde 1990 para acercar motos únicas a personas únicas. Desde nuestro taller en San Justo hemos armado más de 150 motos que han recorrido todo el país. Elegí tu moto soñada y nosotros la hacemos realidad."
 
+let subtitulo_productos = document.querySelector('.subtitulo-productos');
+subtitulo_productos.textContent = `Preparadas, listas... ¡a rodar!`
+subtitulo_productos.style.backgroundColor = '#eeeeee'
 
-// SELECTORES
+
+
+// SHAPE DIVIDERS !!! BOTTOM- 
+let divider = document.querySelector('.row');
+
+let shape_divider = document.createElement('div');
+shape_divider.classList.add('custom-shape-divider-bottom-1612206475')
+
+shape_divider.innerHTML = `    
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>`;
+
+divider.appendChild(shape_divider);
+
+// SHAPE TOP- 
+let divider_dos = document.querySelector('.aboutus');
+
+let shape_divider_dos = document.createElement('div');
+shape_divider_dos.classList.add('custom-shape-divider-bottom-1612207508')
+
+shape_divider_dos.innerHTML = `
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+</svg>
+`;
+
+divider_dos.appendChild(shape_divider_dos);
+
+/* SHAPER EXPAND*/
+
+let divider_tres = document.querySelector('.expand');
+
+let shape_divider_tres = document.createElement('div');
+shape_divider_tres.classList.add('custom-shape-divider-bottom-1612208379')
+
+shape_divider_tres.innerHTML = `
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+    </svg>
+`;
+
+divider_tres.appendChild(shape_divider_tres);
+
+// SHAPE FORM
+let divider_cuatro = document.querySelector('.footer');
+
+let shape_divider_cuatro = document.createElement('div');
+shape_divider_cuatro.classList.add('custom-shape-divider-top-1612239700')
+
+shape_divider_cuatro.innerHTML = `
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+</svg>
+
+`;
+
+divider_cuatro.appendChild(shape_divider_cuatro);
+
+
+/*
+FIN DE SHAPERS - Gracias por su atención
+*/
+
+// NAV PIOLA - SELECTORES
 let navbar = document.querySelector(".navbar");
 let ham = document.querySelector(".ham");
 
@@ -84,6 +187,9 @@ function toggleHamburger() {
     ham.classList.toggle("showClose")
 }
 
+function togglePopup() {
+    document.getElementById("popup-1").classList.toggle("active");
+}
 // PRODUCTOS - OBJ
 class Producto {
     id;
@@ -251,3 +357,46 @@ const removeActiveClasses = () => {
 body = document.querySelector('body');
 
 body.addEventListener('click', removeActiveClasses)
+
+
+// // FORM EVENTOS ATR
+const form = document.querySelector('form');
+const email = form.querySelector('input[type="email"]');
+const handlerSubmit = (evento) => {
+    const respuesta = form.querySelector('p');
+    if (respuesta) {
+        respuesta.remove();
+    }
+    evento.preventDefault();
+    const p = document.createElement('p');
+    p.style.color = 'black';
+    p.innerText = 'Listo, te vamos a responder lo antes posible. Gracias por contactarte!';
+
+    togglePopup();
+    form.reset();
+};
+
+form.addEventListener('submit', handlerSubmit);
+
+
+const emailError = document.querySelector('#mail + span.error');
+
+email.addEventListener('input', function(event) {
+    if (email.validity.valid) {
+        emailError.innerHTML = '';
+        emailError.className = 'error';
+    } else {
+        showError();
+    }
+});
+
+function showError() {
+    if (email.validity.valueMissing) {
+        emailError.textContent = 'Debe introducir una dirección de correo electrónico.';
+    } else if (email.validity.typeMismatch) {
+        emailError.textContent = 'El valor introducido debe ser una dirección de correo electrónico.';
+    } else if (email.validity.tooShort) {
+        emailError.textContent = `El correo electrónico debe tener al menos ${email.minLength} caracteres; ha introducido ${email.value.length}.`;
+    }
+    emailError.className = 'error activo';
+}
