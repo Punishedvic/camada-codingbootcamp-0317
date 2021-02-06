@@ -550,15 +550,6 @@ textarea {
 }
 
 
-/* .button {
-    padding-left: 90px;
-}
-
-button {
-    margin-left: .5em;
-} */
-
-
 /* form*/
 
 form p {
@@ -920,10 +911,118 @@ input:focus:invalid {
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {}
+@media only screen and (min-width: 420px) and (max-width: 480px) {
+    #aboutus {
+        margin-top: 89%;
+    }
+    .texto p {
+        font-size: 20px;
+        text-align: justify;
+        margin: 0;
+        width: 100%;
+        padding: 30px 5px 30px 5px;
+    }
+    #cta_dos {
+        font-size: 30px;
+    }
+    .sub-clientes {
+        margin-top: -20px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #aboutus {
+        margin-top: 19%;
+    }
+    .texto {
+        font-size: 40px;
+        margin-top: 10%;
+        padding: 0 0 20px 10px;
+    }
+    .texto h2 {
+        margin-top: -30%;
+    }
+    .texto p {
+        font-size: 20px;
+    }
+    .imagen {
+        background-position: -350px;
+    }
+    .card {
+        height: 400px;
+        width: 100%;
+        margin-left: 0;
+    }
+    form p {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        width: 500px;
+        font-size: 40px;
+    }
+    .flex-formulario {
+        background-size: cover;
+        background-position: -70px;
+    }
+    .caja-texto {
+        width: 100%;
+        padding: 30px;
+        line-height: 200%;
+    }
+    .caja-formulario {
+        padding-right: 10px;
+    }
+    #titulo-caja {
+        font-size: 30px;
+    }
+    input,
+    textarea {
+        width: 250px;
+    }
+    .sub-clientes {
+        padding-top: 20px;
+    }
+    .panel {
+        height: 70vh;
+    }
+    .portada-img::before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 0;
+    }
+    .img-titulo {
+        width: auto;
+    }
+}
 
 @media only screen and (min-width: 769px) and (max-width: 1023px) {}
 
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    #aboutus {
+        margin-top: 10.9%;
+    }
+    .texto {
+        font-size: 40px;
+        margin-top: 10%;
+        padding: 0 0 20px 20px;
+    }
+    .texto h2 {
+        margin-top: -30%;
+    }
+    .texto p {
+        font-size: 20px;
+    }
+    input,
+    textarea {
+        width: 350px;
+    }
+}
 
-@media only screen and (min-width: 1280px) and (max-width: 1441px) {}
+@media only screen and (min-width: 1280px) and (max-width: 1441px) {
+    #aboutus {
+        margin-top: 8.4%;
+    }
+}
