@@ -65,7 +65,7 @@ app.innerHTML = `
     <div class="flex-formulario">
     <div class="caja-texto">
     <h3 id="titulo-caja">Comunicate con nosotros</h3>
-    <p> @MOTORAMA <br> @MOTORAMAMOTOS <br> consultas@motorama.com <br> Florencio Varela 2950, San Justo GBA Oeste</p>
+    <p>Instagram @MOTORAMA <br>Twitter @MOTORAMAMOTOS <br> consultas@motorama.com <br> Florencio Varela 2950, San Justo GBA Oeste</p>
     </div>  
     <div class="caja-formulario">
       <form  id="formulario" action="" method="post">
@@ -91,7 +91,7 @@ app.innerHTML = `
       <div class="content">
         <div class="close-btn" onclick="togglePopup()">&times;</div>
         <h1>Gracias por comunicarte!</h1>
-        <p>Vamos a leer tu mensaje y te responderemos en breve. Recordá que podés seguirnos en nuestras redes sociales. ¡Esperamos verte pronto! -El equipo de MOTORAMA.</p>
+        <p>Vamos a leer tu mensaje y te responderemos en breve. Recordá que podés seguirnos en nuestras redes sociales. ¡Esperamos verte pronto! - El equipo de MOTORAMA.</p>
       </div>
     </div>
        
